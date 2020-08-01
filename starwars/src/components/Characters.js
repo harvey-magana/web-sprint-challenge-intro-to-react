@@ -3,7 +3,7 @@ import Character from '../components/Character';
 
 const Characters = (props) => {
     const { starChars } = props;
-    console.log(props)
+    console.log(props);
 
     return (
         <div>
@@ -12,4 +12,4 @@ const Characters = (props) => {
     )
 }
 
-export default Characters
+export default Characters;

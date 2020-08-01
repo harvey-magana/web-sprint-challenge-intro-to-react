@@ -3,25 +3,19 @@ import styled from 'styled-components';
 
 const TitleStyle = styled.h2 `
     font-family: 'Teko', sans-serif;
-    font-size: 2.5rem;
-    color: #fff;
-`;
-
-const PStyle = styled.p `
-    font-family: 'Teko', sans-serif;
-    font-size: 2rem;;
+    font-size: 3.5rem;
     color: #fff;
 `;
 
 const HeightMass = styled.p `
     font-family: 'Teko', sans-serif;
-    font-size: 2rem;;
+    font-size: 2.5rem;;
     color: #030846;
     background-color: #736969;
     width: 8rem;
     text-align: center;
-    border-radius: 2rem;
-    padding: 5px;
+    border-radius: 81% 19% 82% 18% / 14% 86% 14% 86%;
+    padding: 10px;
 `;
 
 const Card = styled.div `
@@ -53,4 +47,4 @@ const Character = (props) => {
     )
 }
 
-export default Character
+export default Character;
