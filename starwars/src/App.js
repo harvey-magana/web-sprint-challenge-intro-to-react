@@ -1,7 +1,12 @@
 import React, {useEffect, useState } from 'react';
 import Characters from './components/Characters';
 import axios from 'axios';
+import styled from 'styled-components';
 import './App.css';
+
+const WrapperDiv = styled.div `
+  margin: 5%;
+`;
 
 const App = () => {
   const [chars, setChars] = useState([]);
@@ -21,13 +26,13 @@ const App = () => {
   }, [])
 
   return (
-    <div className="App">
+    <WrapperDiv>
       <h1 className="Header">Characters</h1>
         {
           chars.map( (char, i) => 
               <Characters key={i} starChars={char}/>)
         }
-    </div>
+    </WrapperDiv>
   );
 }
 
