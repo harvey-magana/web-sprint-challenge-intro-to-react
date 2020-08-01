@@ -3,10 +3,12 @@ import React from 'react';
 const Characters = (props) => {
     const { starChars } = props;
     console.log(starChars);
-    
+
     return (
         <div>
-            I am just a child...
+            {
+                starChars.map( (char, i) => <div key={i}>{char.name}</div>)
+            }
         </div>
     )
 }
