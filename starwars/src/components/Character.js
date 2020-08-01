@@ -16,7 +16,7 @@ const PStyle = styled.p `
 const HeightMass = styled.p `
     font-family: 'Teko', sans-serif;
     font-size: 2rem;;
-    color: #fff;
+    color: #030846;
     background-color: #736969;
     width: 8rem;
     text-align: center;
