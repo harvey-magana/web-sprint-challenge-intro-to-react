@@ -1,23 +1,16 @@
 import React from 'react';
 
-const Characters = (props) => {
-    const { starChars } = props;
-    console.log(starChars);
+const Character = (props) => {
+    const { starChar } = props;
+    console.log(starChar);
 
     return (
         <div>
-            {
-                starChars.map( (char, i) => 
-                    <div key={i}>
-                        <p>{char.name}</p>
-                        <p>{char.birth_year}</p>
-                        <p>{char.hair_color}</p>
-                        <p>{char.height}</p>
-                    </div>
-                )
-            }
+            <h2>{starChar.name}</h2>
+            <p>{starChar.birth_year}</p>
+            <p>{starChar.hair_color}</p>
         </div>
     )
 }
 
-export default Characters
+export default Character

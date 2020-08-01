@@ -1,9 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa+One&family=Teko:wght@300&display=swap');
 .App {
   /*text-align: center;*/
+  margin: 20px;
 }
+
+p {
+  font-family: 'Teko', sans-serif;
+  font-size: x-large;
+  color: #fff
+}
+
 .Header {
-  color: #443e3e;
+  color: #fff;
   text-shadow: 1px 1px 5px #fff;
   text-align: center;
+  font-family: 'Teko', sans-serif;
+  font-size: xxx-large;
 }
+
 /* write your parent styles in here for your App.js */
