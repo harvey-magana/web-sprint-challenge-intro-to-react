@@ -1,7 +1,9 @@
 import React from 'react';
 
-const Characters = () => {
-
+const Characters = (props) => {
+    const { starChars } = props;
+    console.log(starChars);
+    
     return (
         <div>
             I am just a child...
