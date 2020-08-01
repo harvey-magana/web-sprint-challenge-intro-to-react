@@ -12,9 +12,9 @@ const HeightMass = styled.p `
     font-size: 2.5rem;;
     color: #030846;
     background-color: #736969;
-    width: 8rem;
+    width: 10rem;
     text-align: center;
-    border-radius: 81% 19% 82% 18% / 14% 86% 14% 86%;
+    border-radius: 40px 130px 40px 130px;
     padding: 10px;
 `;
 
