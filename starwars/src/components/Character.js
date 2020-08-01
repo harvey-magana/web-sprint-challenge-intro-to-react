@@ -7,7 +7,14 @@ const Characters = (props) => {
     return (
         <div>
             {
-                starChars.map( (char, i) => <div key={i}>{char.name}</div>)
+                starChars.map( (char, i) => 
+                    <div key={i}>
+                        <p>{char.name}</p>
+                        <p>{char.birth_year}</p>
+                        <p>{char.hair_color}</p>
+                        <p>{char.height}</p>
+                    </div>
+                )
             }
         </div>
     )
