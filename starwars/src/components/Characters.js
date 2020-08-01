@@ -3,13 +3,11 @@ import Character from '../components/Character';
 
 const Characters = (props) => {
     const { starChars } = props;
+    console.log(props)
 
     return (
         <div>
-            {
-                starChars.map( (char, i) => 
-                    <Character key={i} starChar={char}/>)
-            }
+            <Character starChar={starChars} />
         </div>
     )
 }

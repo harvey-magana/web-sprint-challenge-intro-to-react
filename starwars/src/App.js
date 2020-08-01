@@ -19,10 +19,14 @@ const App = () => {
       })
       .catch( error => console.log(error))
   }, [])
+
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-        <Characters starChars={chars} />
+        {
+          chars.map( (char, i) => 
+              <Characters key={i} starChars={char}/>)
+        }
     </div>
   );
 }
