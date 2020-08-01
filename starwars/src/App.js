@@ -8,6 +8,13 @@ const WrapperDiv = styled.div `
   margin: 5%;
 `;
 
+const Header = styled.h1 `
+  color: #fff;
+  text-align: center;
+  font-family: 'Teko', sans-serif;
+  font-size: 10rem;
+`;
+
 const App = () => {
   const [chars, setChars] = useState([]);
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -27,7 +34,7 @@ const App = () => {
 
   return (
     <WrapperDiv>
-      <h1 className="Header">Characters</h1>
+      <Header>Characters</Header>
         {
           chars.map( (char, i) => 
               <Characters key={i} starChars={char}/>)
