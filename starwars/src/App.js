@@ -1,9 +1,10 @@
-import React from 'react';
-import Character from './components/Character';
+import React, {useEffect, useState } from 'react';
+import Characters from './components/Character';
 import axios from 'axios';
 import './App.css';
 
 const App = () => {
+  const [chars, setChars] = useState([])
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -14,7 +15,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      <Character />
+      <Characters />
     </div>
   );
 }
