@@ -21,7 +21,6 @@ const HeightMass = styled.p `
 const Card = styled.div `
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    border: 1px solid green;
     margin: 1.5rem;
 `;
 
@@ -30,6 +29,12 @@ const CardContainer = styled.div `
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border: 1px solid green;
+    transition: 0.5s all ease-out;
+
+    &:hover {
+        border: 1px solid yellow;
+    }
 `;
 
 const Character = (props) => {
