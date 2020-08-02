@@ -30,6 +30,9 @@ const CardContainer = styled.div `
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-gap: 10px;
 `;
 
 const Character = (props) => {
@@ -41,6 +44,8 @@ const Character = (props) => {
                 <CardContainer>
                     <TitleStyle>{starChar.name}</TitleStyle>
                     <HeightMass>{starChar.birth_year}</HeightMass>
+                    <TitleStyle>{starChar.name}</TitleStyle>
+                    <TitleStyle>{starChar.name}</TitleStyle>
                 </CardContainer>
             </Card>
         </div>

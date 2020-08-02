@@ -9,10 +9,11 @@ const WrapperDiv = styled.div `
 `;
 
 const Header = styled.h1 `
-  color: #fff;
+  color: #transparent;
   text-align: center;
   font-family: 'Teko', sans-serif;
   font-size: 10rem;
+  text-shadow: -2px 0 green, 0 2px green, 2px 0 green, 0 -2px green;
 `;
 
 const App = () => {
