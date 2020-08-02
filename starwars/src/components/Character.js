@@ -37,6 +37,7 @@ const CardContainer = styled.div `
 
 const Character = (props) => {
     const { starChar } = props;
+    console.log(starChar)
 
     return (
         <div>
@@ -44,8 +45,8 @@ const Character = (props) => {
                 <CardContainer>
                     <TitleStyle>{starChar.name}</TitleStyle>
                     <HeightMass>{starChar.birth_year}</HeightMass>
-                    <TitleStyle>{starChar.name}</TitleStyle>
-                    <TitleStyle>{starChar.name}</TitleStyle>
+                    <TitleStyle>{starChar.starships ? starChar.starships[0] : <p>None Found</p> }</TitleStyle>
+                    <TitleStyle>{starChar.vehicles ? starChar.vehicles[0] : <p>None Found</p> }</TitleStyle>
                 </CardContainer>
             </Card>
         </div>
