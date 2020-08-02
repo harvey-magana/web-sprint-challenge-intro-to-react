@@ -18,14 +18,6 @@ const Header = styled.h1 `
 
 const App = () => {
   const [chars, setChars] = useState([]);
-  let one = "https://swapi.dev/api/people/";
-  let two = "https://swapi.dev/api/starships/";
-  let three = "https://swapi.dev/api/vehicles/";
-
-
-  const requestOne = axios.get(one);
-  const requestTwo = axios.get(two);
-  const requestThree = axios.get(three);
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -33,13 +25,14 @@ const App = () => {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
   useEffect( () => {
-    axios.all([requestOne, requestTwo, requestThree])
-         .then(axios.spread( (...response) => {
-          setChars([response[0].data.results, response[1].data.results, response[2].data.results])
-         }))
-         .catch( error => console.log(error))
-     }, [])
-    //console.log(chars);
+    axios.get('https://swapi.dev/api/people/')
+      .then(res => {
+        console.log(res)
+        setChars(res.data.results)
+      })
+      .catch( error => console.log(error))
+  }, [])
+
   return (
     <WrapperDiv>
       <Header>Characters</Header>
