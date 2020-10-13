@@ -1,18 +1,46 @@
-import React from 'react';
+import React, {useEffect, useState } from 'react';
+import Characters from './components/Characters';
+import axios from 'axios';
+import styled from 'styled-components';
 import './App.css';
 
+const WrapperDiv = styled.div `
+  margin: 5%;
+`;
+
+const Header = styled.h1 `
+  color: #transparent;
+  text-align: center;
+  font-family: 'Teko', sans-serif;
+  font-size: 10rem;
+  text-shadow: -2px 0 green, 0 2px green, 2px 0 green, 0 -2px green;
+`;
+
 const App = () => {
+  const [chars, setChars] = useState([]);
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
+  useEffect( () => {
+    axios.get('https://swapi.dev/api/people/')
+      .then(res => {
+        console.log(res)
+        setChars(res.data.results)
+      })
+      .catch( error => console.log(error))
+  }, [])
 
   return (
-    <div className="App">
-      <h1 className="Header">Characters</h1>
-    </div>
+    <WrapperDiv>
+      <Header>Characters</Header>
+        {
+          chars.map( (char, i) => 
+              <Characters key={i} starChars={char}/>)
+        }
+    </WrapperDiv>
   );
 }
 
